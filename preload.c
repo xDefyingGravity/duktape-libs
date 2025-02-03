@@ -1,6 +1,6 @@
 #include "preload.h"
 
-inline duk_ret_t console_log(duk_context *ctx) {
+duk_ret_t console_log(duk_context *ctx) {
     int nargs = duk_get_top(ctx);
 
     for (int i = 0; i < nargs; i++) {
@@ -11,7 +11,7 @@ inline duk_ret_t console_log(duk_context *ctx) {
     return 0;
 }
 
-inline duk_ret_t console_error(duk_context *ctx) {
+duk_ret_t console_error(duk_context *ctx) {
     int nargs = duk_get_top(ctx);
 
     for (int i = 0; i < nargs; i++) {
