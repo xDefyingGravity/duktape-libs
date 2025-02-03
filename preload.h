@@ -27,8 +27,8 @@ inline duk_ret_t console_error(duk_context *ctx) {
 
 void register_console_functions(duk_context *ctx) {
     duk_push_c_function(ctx, console_log, DUK_VARARGS);
-    duk_put_global_string(ctx, "console_log");
+    duk_put_global_string(ctx, "print");
 
     duk_push_c_function(ctx, console_error, DUK_VARARGS);
-    duk_put_global_string(ctx, "console_error");
+    duk_put_global_string(ctx, "error");
 }
